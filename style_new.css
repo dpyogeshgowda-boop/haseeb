@@ -1,0 +1,433 @@
+/* =========================
+   RESET & BASIC STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  background: #2b3a55;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a, nav ul li button {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+  color: #ffdd57;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  height: 55vh;
+  background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* =========================
+   DASHBOARD STATS
+========================= */
+#dashboard-stats {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.3);
+}
+
+.stat-card i {
+  font-size: 2rem;
+  color: #ffd700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stat-card span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.stat-card small {
+  opacity: 0.9;
+}
+
+/* =========================
+   RECENT BOOKINGS
+========================= */
+.recent-bookings {
+  padding: 40px 50px;
+  background: #f8f9fa;
+}
+
+.recent-bookings h2 {
+  text-align: center;
+  color: #2b3a55;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+.categories {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 250px;
+  min-width: 200px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================
+   BOOKING SECTIONS
+========================= */
+.booking-section {
+  display: none;
+  padding: 40px 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 40px auto 70px auto;
+  max-width: 600px;
+}
+
+.booking-section:target {
+  display: block;
+}
+
+.booking-section h2 {
+  margin-bottom: 25px;
+  color: #2b3a55;
+}
+
+.booking-section form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.booking-section form select,
+.booking-section form input[type="date"],
+.booking-section form input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.booking-section form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px 0;
+  font-weight: bold;
+  background-color: #2b3a55;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.booking-section form button:hover {
+  background-color: #ffdd57;
+  color: #2b3a55;
+}
+
+/* =========================
+   BLOG SECTION
+========================= */
+.blog-title {
+  padding-left: 50px;
+  font-size: 35px;
+  margin-top: 80px;
+  color: #2b3a55;
+}
+
+.blog-container {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.blog-card {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.blog-card h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #2b3a55;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+  padding: 50px;
+  text-align: center;
+  background: #eee;
+  margin-top: 70px;
+}
+
+/* =========================
+   LOGIN SECTION
+========================= */
+.hidden {
+  display: none;
+}
+
+#login-section {
+  background-color: #f2f2f2;
+  padding: 15px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  max-width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#login-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#login-section input[type="text"],
+#login-section input[type="password"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#login-section button[type="submit"] {
+  background-color: #2b3a55;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#login-section button[type="submit"]:hover {
+  background-color: #ffdd57;
+  color: #2b3a55;
+}
+
+/* =========================
+   BLOG MODAL
+========================= */
+.blog-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.blog-modal.hidden {
+  display: none;
+}
+
+.blog-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+}
+
+.blog-modal-content h2 {
+  margin-bottom: 15px;
+  color: #2b3a55;
+}
+
+.blog-modal-content p {
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media screen and (max-width: 768px) {
+  .categories {
+    padding: 30px 20px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .blog-card {
+    width: 45%;
+  }
+
+  #dashboard-stats {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card, .blog-card {
+    width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .blog-modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}

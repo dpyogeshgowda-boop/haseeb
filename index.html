@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Booking Website - Dashboard</title>
+  <link rel="stylesheet" href="style_new.css" />
+  <script src="script_new.js" defer></script>
+</head>
+<body>
+
+<!-- Top-level container for Home anchor -->
+<div id="home"></div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">MyBook</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#movies-booking">Movies</a></li>
+    <li><a href="#events-booking">Events</a></li>
+    <li><a href="#concerts-booking">Concerts</a></li>
+    <li><a href="#blog-section">Blog</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+    <li><button id="login-btn">Login</button></li>
+  </ul>
+</nav>
+
+<!-- LOGIN FORM -->
+<section id="login-section" class="hidden">
+  <form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+    
+    <button type="submit">Login</button>
+  </form>
+</section>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to My Booking Platform</h1>
+    <p>Book movies, concerts, events and more!</p>
+  </div>
+</section>
+
+<!-- DASHBOARD STATS -->
+<div id="dashboard-stats" class="dashboard-stats">
+  <div class="stat-card">
+    <i class="fas fa-ticket-alt"></i>
+    <span>45</span>
+    <small>Total Bookings</small>
+  </div>
+  <div class="stat-card">
+    <i class="fas fa-star"></i>
+    <span>4.8</span>
+    <small>Rating</small>
+  </div>
+  <div class="stat-card">
+    <i class="fas fa-wallet"></i>
+    <span>₹2,450</span>
+    <small>Total Spent</small>
+  </div>
+</div>
+
+<!-- RECENT BOOKINGS -->
+<section id="recent-bookings" class="recent-bookings">
+  <h2>Recent Bookings</h2>
+  <div class="booking-list" id="booking-list">
+    <!-- Populated by JS -->
+  </div>
+</section>
+
+<!-- MAIN CATEGORIES -->
+<section class="categories">
+  <a href="#movies-booking" class="card">
+    <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=800" alt="Movies" />
+    <h3>Movies</h3>
+  </a>
+  <a href="#concerts-booking" class="card">
+    <img src="https://i.ytimg.com/vi/enNaUd1SZkg/maxresdefault.jpg" alt="Concerts" />
+    <h3>Concerts</h3>
+  </a>
+  <a href="#sports-booking" class="card">
+    <img src="https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?semt=ais_hybrid&w=740&q=80" alt="Sports" />
+    <h3>Sports</h3>
+  </a>
+  <a href="#events-booking" class="card">
+    <img src="https://pinkcaviar.com.au/wp-content/uploads/2022/09/Professional-and-Stress-Free-Event-Management-Banner-1.jpg" alt="Events" />
+    <h3>Events</h3>
+  </a>
+  <a href="#travel-booking" class="card">
+    <img src="https://partnerships.booking.com/sites/default/files/styles/header_post_desktop/public/2022-08/GettyImages-1202975142.jpg?h=bebda8f5&itok=ZtN_9f24" alt="Travel" />
+    <h3>Travel</h3>
+  </a>
+</section>
+
+<!-- BOOKING SECTIONS -->
+<section id="movies-booking" class="booking-section">
+  <h2>Book Movies</h2>
+  <form>
+    <label for="movie-option">Choose a Movie:</label>
+    <select id="movie-option">
+      <option>Movie 1</option>
+      <option>Movie 2</option>
+      <option>Movie 3</option>
+    </select>
+    <label for="movie-date">Date:</label>
+    <input type="date" id="movie-date" />
+    <label for="movie-tickets">Tickets:</label>
+    <input type="number" id="movie-tickets" min="1" max="10" />
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="concerts-booking" class="booking-section">
+  <h2>Book Concerts</h2>
+  <form>
+    <label for="concert-option">Choose a Concert:</label>
+    <select id="concert-option">
+      <option>Concert A</option>
+      <option>Concert B</option>
+      <option>Concert C</option>
+    </select>
+    <label for="concert-date">Date:</label>
+    <input type="date" id="concert-date" />
+    <label for="concert-tickets">Tickets:</label>
+    <input type="number" id="concert-tickets" min="1" max="10" />
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="sports-booking" class="booking-section">
+  <h2>Book Sports</h2>
+  <form>
+    <label for="sports-option">Choose a Sport Event:</label>
+    <select id="sports-option">
+      <option>Sport Event 1</option>
+      <option>Sport Event 2</option>
+      <option>Sport Event 3</option>
+    </select>
+    <label for="sports-date">Date:</label>
+    <input type="date" id="sports-date" />
+    <label for="sports-tickets">Tickets:</label>
+    <input type="number" id="sports-tickets" min="1" max="10" />
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="events-booking" class="booking-section">
+  <h2>Book Events</h2>
+  <form>
+    <label for="events-option">Choose an Event:</label>
+    <select id="events-option">
+      <option>Event X</option>
+      <option>Event Y</option>
+      <option>Event Z</option>
+    </select>
+    <label for="events-date">Date:</label>
+    <input type="date" id="events-date" />
+    <label for="events-tickets">Tickets:</label>
+    <input type="number" id="events-tickets" min="1" max="10" />
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="travel-booking" class="booking-section">
+  <h2>Book Travel</h2>
+  <form>
+    <label for="travel-destination">Choose a destination:</label>
+    <select id="travel-destination">
+      <option>Paris</option>
+      <option>London</option>
+      <option>New York</option>
+    </select>
+    <label for="travel-date">Date:</label>
+    <input type="date" id="travel-date" />
+    <label for="travel-passenger">Passengers:</label>
+    <input type="number" id="travel-passenger" min="1" max="10" />
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<!-- BLOG SECTION -->
+<h2 id="blog-section" class="blog-title">Latest Blog Updates</h2>
+<section class="blog-container">
+  <div class="blog-card" onclick="openBlog('events')">
+    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800" alt="" />
+    <h3>How to Book Events Easily</h3>
+    <p>Learn how to book events smoothly with our platform...</p>
+  </div>
+  <div class="blog-card" onclick="openBlog('movies')">
+    <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?w=800" alt="" />
+    <h3>Top 10 Movies to Watch</h3>
+    <p>A curated list of trending movies you must watch...</p>
+  </div>
+  <div class="blog-card" onclick="openBlog('concerts')">
+    <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?w=800" alt="" />
+    <h3>Upcoming Concerts in 2025</h3>
+    <p>Check out the biggest concerts happening this year...</p>
+  </div>
+</section>
+
+<!-- BLOG MODAL -->
+<div id="blog-modal" class="blog-modal hidden">
+  <div class="blog-modal-content">
+    <span class="close-btn" onclick="closeBlog()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-content"></p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact-section" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Email: support@mybook.com</p>
+  <p>Phone: +1 234 567 8901</p>
+</section>
+
+<footer>
+  <p>© 2025 Your Ultimate Booking Hub</p>
+</footer>
+
+</body>
+</html>
